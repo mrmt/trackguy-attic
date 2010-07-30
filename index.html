@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title>TrackGuy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
+    <link rel="stylesheet" type="text/css" href="http://diary.mrmt.net/tds.css" />
+    <style type="text/css">
+<!--  
+h1 {
+	font-size: large;
+	font-family: sans-serif;
+}
+h2 {
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+}
+
+h3 {
+	color: darkblue;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+p {
+	margin: 1em;
+}
+body {
+}
+b, strong { color: #300;}
+a { color: #066; }
+a:active { color: #0f0;}
+a:visited { color: #066;}
+a:hover { text-decoration: underline;}
+span.note{ font-size: small; }
+-->
+    </style>
+  </head>
+  <body>
+
+    <h1>TrackGuy</h1>
+
+    <h2>このページの目的</h2>
+    <p>
+      いまでもTrackGuyに関するご質問や検索をいただくので、
+      情報のポインタとしてこのページをつくりました。
+    </p>
+
+    <h2>説明</h2>
+    <p>
+      TrackGuyは、Perlで書かれたバグ・トラッキング・システムでした。
+    </p>
+
+    <h2>特徴</h2>
+    <ul>
+      <li>Perlで書かれていた
+      <li>技術者以外のスタッフからの意見吸い上げ、
+	横連絡の円滑を主たる目的としていたので、
+	初期バージョンではユーザ認証などの機構を一切設けず、
+	「敷居の低さ」を第一に設計。
+	逆にいえば、一般公開目的には適していないし、
+	本格的な開発者用BTSでもない。
+
+      <li>ひとつのバグ報告を、ひとつのメールとして扱っている。
+	いいかえれば、RDBなどいわゆるデータベースは用いていない。
+	具体的には、バグ報告ひとつを、
+	RFC822なメールテキストひとつとして扱い格納している。
+	バグ・トラッキング・システム特有な情報は <tt>X-</tt>
+	ヘッダに格納。
+	バグレポートに関する追記は、
+	あたかもあるメールに対するフォローアップのように、
+	<tt>References:</tt>
+	ヘッダをつけたRFC822テキストファイルとして格納されていく。
+	内部的にはスレッドをもったメールテキストの単なる山なので、
+	MHonArcなど既存ツールの応用が容易。<br>
+	将来的には、メーリングリストとの有機的融合、
+	imap4での読み書き、nntpとの融合などを考えていました。
+      <li>社内利用のため、気合いで一日で設計→開発→稼働
+    </ul>
+
+    <h2>顛末</h2>
+    <p>
+      事故によりcvs pserverの内容を失い、
+      運用していたサーバも廃止されていたため、
+      ソースは一切消滅してしまいました。
+    </p>
+
+    <p>
+      TrackGuyはそのうちRubyで書き直そうと思っていたのですが、
+      <a href="http://www.daifukuya.com/kagemai/">影舞</a>というバグ・トラッキング・システムが、
+      TrackGuyのlook &amp; feelなどを参考にされ、
+      スクラッチからRubyで開発されているので、TrackGuyに関する情報をおもとめのかたは、
+      <a href="http://www.daifukuya.com/kagemai/">影舞</a>に関する情報に移られるのがいいと思います。
+    </p>
+
+    <h2>ほか</h2>
+    <p>
+      TrackGuyの名前は、バグ・トラッキング・ツール、また有名なサイトBugTraq (バグトラック)から、
+      バグのトラックの集まりの日本版なら「トラック野郎」がよかろうということで、
+      それを英訳したものです。「トラック野郎」のアイディアは佐藤紀行さんによります。
+    </p>
+
+    <p>
+      2000年に京都で開催された
+      <a href="http://lc.linux.or.jp/lc2000fall/t-detail.html">LC2000 Fall,
+	Perl/Ruby Conference</a>
+      でTrackGuyを発表させていただきました。
+    </p>
+
+    <p>
+      なんと、まだTrackGuyを運用しているサイトがありました。<br />
+      <a href="http://animaspark.net/bts/">AnimationMaster BTS</a>
+    </p>
+
+    <p>
+      AnimationMaster さんに
+      <a href="trackguy-0.1.1.tar.gz">trackguy-0.1.1.tar.gz</a>
+      (MD5 86238a98c212aaa76b4f8b4559eb347c)
+      を送っていただきました! ありがとうございます.
+      いやー、自分のソースを8年ぶりに見るというのもなかなか…
+    </p>
+
+    <p align="center">
+      <img src="trackguy.jpg" alt="" width="401" height="133" />
+    </p>
+
+    <p>
+      morimoto@mrmt.net<br>
+      $Id: index.html,v 1.7 2010-07-14 11:57:08 morimoto Exp $
+    </p>
+
+  </body>
+</html>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-101729-1");
+pageTracker._trackPageview();
+</script>
