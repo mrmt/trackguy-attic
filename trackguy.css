@@ -1,0 +1,25 @@
+h1 {
+	font-size: large;
+	font-family: sans-serif;
+}
+h2 {
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+}
+
+h3 {
+	color: darkblue;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+p {
+	margin: 1em;
+}
+body {
+}
+b, strong { color: #300;}
+a { color: #066; }
+a:active { color: #0f0;}
+a:visited { color: #066;}
+a:hover { text-decoration: underline;}
+span.note{ font-size: small; }

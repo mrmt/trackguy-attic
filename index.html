@@ -1,120 +1,92 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>TrackGuy</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp" />
-    <link rel="stylesheet" type="text/css" href="http://diary.mrmt.net/tds.css" />
-    <style type="text/css">
-<!--  
-h1 {
-	font-size: large;
-	font-family: sans-serif;
-}
-h2 {
-	border-style: solid;
-	border-width: 0px 0px 2px 0px;
-}
-
-h3 {
-	color: darkblue;
-	border-style: solid;
-	border-width: 0px 0px 1px 0px;
-}
-p {
-	margin: 1em;
-}
-body {
-}
-b, strong { color: #300;}
-a { color: #066; }
-a:active { color: #0f0;}
-a:visited { color: #066;}
-a:hover { text-decoration: underline;}
-span.note{ font-size: small; }
--->
-    </style>
+    <link rel="stylesheet" href="trackguy.css">
+    <link rel="canonical" href="http://trackguy.mrmt.net/">
   </head>
-  <body>
 
+  <body>
     <h1>TrackGuy</h1>
 
-    <h2>$B$3$N%Z!<%8$NL\E*(B</h2>
+    <h2>このページの目的</h2>
     <p>
-      $B$$$^$G$b(BTrackGuy$B$K4X$9$k$4<ALd$d8!:w$r$$$?$@$/$N$G!"(B
-      $B>pJs$N%]%$%s%?$H$7$F$3$N%Z!<%8$r$D$/$j$^$7$?!#(B
+      いまでもTrackGuyに関するご質問や検索をいただくので、
+      情報のポインタとしてこのページをつくりました。
     </p>
 
-    <h2>$B@bL@(B</h2>
+    <h2>説明</h2>
     <p>
-      TrackGuy$B$O!"(BPerl$B$G=q$+$l$?%P%0!&%H%i%C%-%s%0!&%7%9%F%`$G$7$?!#(B
+      TrackGuyは、Perlで書かれたバグ・トラッキング・システムでした。
     </p>
 
-    <h2>$BFCD'(B</h2>
+    <h2>特徴</h2>
     <ul>
-      <li>Perl$B$G=q$+$l$F$$$?(B
-      <li>$B5;=Q<T0J30$N%9%?%C%U$+$i$N0U8+5[$$>e$2!"(B
-	$B2#O"Mm$N1_3j$r<g$?$kL\E*$H$7$F$$$?$N$G!"(B
-	$B=i4|%P!<%8%g%s$G$O%f!<%6G'>Z$J$I$N5!9=$r0l@Z@_$1$:!"(B
-	$B!VI_5o$NDc$5!W$rBh0l$K@_7W!#(B
-	$B5U$K$$$($P!"0lHL8x3+L\E*$K$OE,$7$F$$$J$$$7!"(B
-	$BK\3JE*$J3+H/<TMQ(BBTS$B$G$b$J$$!#(B
-
-      <li>$B$R$H$D$N%P%0Js9p$r!"$R$H$D$N%a!<%k$H$7$F07$C$F$$$k!#(B
-	$B$$$$$+$($l$P!"(BRDB$B$J$I$$$o$f$k%G!<%?%Y!<%9$OMQ$$$F$$$J$$!#(B
-	$B6qBNE*$K$O!"%P%0Js9p$R$H$D$r!"(B
-	RFC822$B$J%a!<%k%F%-%9%H$R$H$D$H$7$F07$$3JG<$7$F$$$k!#(B
-	$B%P%0!&%H%i%C%-%s%0!&%7%9%F%`FCM-$J>pJs$O(B <tt>X-</tt>
-	$B%X%C%@$K3JG<!#(B
-	$B%P%0%l%]!<%H$K4X$9$kDI5-$O!"(B
-	$B$"$?$+$b$"$k%a!<%k$KBP$9$k%U%)%m!<%"%C%W$N$h$&$K!"(B
+      <li>Perlで書かれていた</li>
+      <li>技術者以外のスタッフからの意見吸い上げ、
+	横連絡の円滑を主たる目的としていたので、
+	初期バージョンではユーザ認証などの機構を一切設けず、
+	「敷居の低さ」を第一に設計。
+	逆にいえば、一般公開目的には適していないし、
+	本格的な開発者用BTSでもない。</li>
+      <li>ひとつのバグ報告を、ひとつのメールとして扱っている。
+	いいかえれば、RDBなどいわゆるデータベースは用いていない。
+	具体的には、バグ報告ひとつを、
+	RFC822なメールテキストひとつとして扱い格納している。
+	バグ・トラッキング・システム特有な情報は <tt>X-</tt>
+	ヘッダに格納。
+	バグレポートに関する追記は、
+	あたかもあるメールに対するフォローアップのように、
 	<tt>References:</tt>
-	$B%X%C%@$r$D$1$?(BRFC822$B%F%-%9%H%U%!%$%k$H$7$F3JG<$5$l$F$$$/!#(B
-	$BFbItE*$K$O%9%l%C%I$r$b$C$?%a!<%k%F%-%9%H$NC1$J$k;3$J$N$G!"(B
-	MHonArc$B$J$I4{B8%D!<%k$N1~MQ$,MF0W!#(B<br>
-	$B>-MhE*$K$O!"%a!<%j%s%0%j%9%H$H$NM-5!E*M;9g!"(B
-	imap4$B$G$NFI$_=q$-!"(Bnntp$B$H$NM;9g$J$I$r9M$($F$$$^$7$?!#(B
-      <li>$B<RFbMxMQ$N$?$a!"5$9g$$$G0lF|$G@_7W"*3+H/"*2TF/(B
+	ヘッダをつけたRFC822テキストファイルとして格納されていく。
+	内部的にはスレッドをもったメールテキストの単なる山なので、
+	MHonArcなど既存ツールの応用が容易。<br>
+	将来的には、メーリングリストとの有機的融合、
+	imap4での読み書き、nntpとの融合などを考えていました。</li>
+      <li>社内利用のため、気合いで一日で設計→開発→稼働</li>
     </ul>
 
-    <h2>$BE?Kv(B</h2>
+    <h2>顛末</h2>
     <p>
-      $B;v8N$K$h$j(Bcvs pserver$B$NFbMF$r<:$$!"(B
-      $B1?MQ$7$F$$$?%5!<%P$bGQ;_$5$l$F$$$?$?$a!"(B
-      $B%=!<%9$O0l@Z>CLG$7$F$7$^$$$^$7$?!#(B
+      事故によりcvs pserverの内容を失い、
+      運用していたサーバも廃止されていたため、
+      ソースは一切消滅してしまいました。
     </p>
 
     <p>
-      TrackGuy$B$O$=$N$&$A(BRuby$B$G=q$-D>$=$&$H;W$C$F$$$?$N$G$9$,!"(B
-      <a href="http://www.daifukuya.com/kagemai/">$B1FIq(B</a>$B$H$$$&%P%0!&%H%i%C%-%s%0!&%7%9%F%`$,!"(B
-      TrackGuy$B$N(Blook &amp; feel$B$J$I$r;29M$K$5$l!"(B
-      $B%9%/%i%C%A$+$i(BRuby$B$G3+H/$5$l$F$$$k$N$G!"(BTrackGuy$B$K4X$9$k>pJs$r$*$b$H$a$N$+$?$O!"(B
-      <a href="http://www.daifukuya.com/kagemai/">$B1FIq(B</a>$B$K4X$9$k>pJs$K0\$i$l$k$N$,$$$$$H;W$$$^$9!#(B
+      TrackGuyはそのうちRubyで書き直そうと思っていたのですが、
+      <a href="http://www.daifukuya.com/kagemai/">影舞</a>というバグ・トラッキング・システムが、
+      TrackGuyのlook &amp; feelなどを参考にされ、
+      スクラッチからRubyで開発されているので、TrackGuyに関する情報をおもとめのかたは、
+      <a href="http://www.daifukuya.com/kagemai/">影舞</a>に関する情報に移られるのがいいと思います。
     </p>
 
-    <h2>$B$[$+(B</h2>
+    <h2>ほか</h2>
     <p>
-      TrackGuy$B$NL>A0$O!"%P%0!&%H%i%C%-%s%0!&%D!<%k!"$^$?M-L>$J%5%$%H(BBugTraq ($B%P%0%H%i%C%/(B)$B$+$i!"(B
-      $B%P%0$N%H%i%C%/$N=8$^$j$NF|K\HG$J$i!V%H%i%C%/LnO:!W$,$h$+$m$&$H$$$&$3$H$G!"(B
-      $B$=$l$r1QLu$7$?$b$N$G$9!#!V%H%i%C%/LnO:!W$N%"%$%G%#%"$O:4F#5*9T$5$s$K$h$j$^$9!#(B
+      TrackGuyの名前は、バグ・トラッキング・ツール、また有名なサイトBugTraq (バグトラック)から、
+      バグのトラックの集まりの日本版なら「トラック野郎」がよかろうということで、
+      それを英訳したものです。「トラック野郎」のアイディアは佐藤紀行さんによります。
     </p>
 
     <p>
-      2000$BG/$K5~ET$G3+:E$5$l$?(B
+      2000年に京都で開催された
       <a href="http://lc.linux.or.jp/lc2000fall/t-detail.html">LC2000 Fall,
 	Perl/Ruby Conference</a>
-      $B$G(BTrackGuy$B$rH/I=$5$;$F$$$?$@$-$^$7$?!#(B
+      でTrackGuyを発表させていただきました。
     </p>
 
     <p>
-      $B$J$s$H!"$^$@(BTrackGuy$B$r1?MQ$7$F$$$k%5%$%H$,$"$j$^$7$?!#(B<br />
+      なんと、まだTrackGuyを運用しているサイトがありました。<br />
       <a href="http://animaspark.net/bts/">AnimationMaster BTS</a>
     </p>
 
     <p>
-      AnimationMaster $B$5$s$K(B
+      AnimationMaster さんに
       <a href="trackguy-0.1.1.tar.gz">trackguy-0.1.1.tar.gz</a>
       (MD5 86238a98c212aaa76b4f8b4559eb347c)
-      $B$rAw$C$F$$$?$@$-$^$7$?(B! $B$"$j$,$H$&$4$6$$$^$9(B.
-      $B$$$d!<!"<+J,$N%=!<%9$r(B8$BG/$V$j$K8+$k$H$$$&$N$b$J$+$J$+!D(B
+      を送っていただきました! ありがとうございます.
+      いやー、自分のソースを8年ぶりに見るというのもなかなか…
     </p>
 
     <p align="center">
