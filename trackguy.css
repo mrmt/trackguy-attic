@@ -12,12 +12,10 @@ h3 {
 	border-style: solid;
 	border-width: 0px 0px 1px 0px;
 }
-p {
-	margin: 1em;
-}
-b, strong { color: #300;}
+p {	margin: 1em; }
+b, strong { color: #300; }
 a { color: #066; }
-a:active { color: #0f0;}
-a:visited { color: #066;}
-a:hover { text-decoration: underline;}
+a:active { color: #0f0; }
+a:visited { color: #066; }
+a:hover { text-decoration: underline; }
 span.note{ font-size: small; }
