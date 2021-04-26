@@ -1,36 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-053VYRSGKM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-053VYRSGKM');
-    </script>
     <meta charset="utf-8" />
     <title>TrackGuy</title>
-    <link rel="stylesheet" href="trackguy.css">
-    <link rel="canonical" href="https://trackguy.mrmt.net/">
+    <link rel="stylesheet" href="trackguy.css" />
+    <link rel="canonical" href="https://trackguy.mrmt.net/" />
   </head>
 
   <body>
     <h1>TrackGuy</h1>
-
-    <script type="text/javascript">
-      google_ad_client = "ca-pub-8387912781947832";
-      if((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0){
-        google_ad_slot = "2593226695";
-        google_ad_width = 300;
-        google_ad_height = 250;
-      }else{
-        google_ad_slot = "1116493499";
-        google_ad_width = 728;
-        google_ad_height = 90;
-      }
-    </script>
-    <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-    </script>
 
     <h2>このページの目的</h2>
     <p>
@@ -40,40 +18,29 @@
 
     <h2>説明</h2>
     <p>
-      TrackGuyは、2000年6月ごろPerlで書かれたバグ・トラッキング・システムでした。
+      TrackGuyは、2000年6月ごろにPerlで書かれたバグ・トラッキング・システムでした。
     </p>
 
     <h2>特徴</h2>
     <ul>
       <li>Perlで書かれていた</li>
-      <li>技術者以外のスタッフからの意見吸い上げ、
-	横連絡の円滑を主たる目的としていたので、
-	初期バージョンではユーザ認証などの機構を一切設けず、
-	「敷居の低さ」を第一に設計。
-	逆にいえば、一般公開目的には適していないし、
-	本格的な開発者用BTSでもない。</li>
+      <li>技術者以外のスタッフからの意見吸い上げ、横連絡の円滑を主たる目的としていたので、
+	初期バージョンではユーザ認証などの機構を一切設けず、「敷居の低さ」を第一に設計。
+	逆にいえば、一般公開目的には適していないし、本格的な開発者用BTSでもない。</li>
       <li>ひとつのバグ報告を、ひとつのメールとして扱っている。
 	いいかえれば、RDBなどいわゆるデータベースは用いていない。
-	具体的には、バグ報告ひとつを、
-	RFC822なメールテキストひとつとして扱い格納している。
-	バグ・トラッキング・システム特有な情報は <tt>X-</tt>
-	ヘッダに格納。
-	バグレポートに関する追記は、
-	あたかもあるメールに対するフォローアップのように、
-	<tt>References:</tt>
-	ヘッダをつけたRFC822テキストファイルとして格納されていく。
-	内部的にはスレッドをもったメールテキストの単なる山なので、
-	MHonArcなど既存ツールの応用が容易。<br>
-	将来的には、メーリングリストとの有機的融合、
-	imap4での読み書き、nntpとの融合などを考えていました。</li>
+	具体的には、バグ報告ひとつを、RFC822なメールテキストひとつとして扱い格納している。
+	バグ・トラッキング・システム特有な情報は<tt>X-</tt>ヘッダに格納。
+	バグレポートに関する追記は、あたかもあるメールに対するフォローアップのように、
+	<tt>References:</tt>ヘッダをつけたRFC822テキストファイルとして格納されていく。
+	内部的にはスレッドをもったメールテキストの単なる山なので、MHonArcなど既存ツールの応用が容易。<br>
+	将来的には、メーリングリストとの有機的融合、imap4での読み書き、nntpとの融合などを考えていました。</li>
       <li>社内利用のため、気合いで一日で設計→開発→稼働</li>
     </ul>
 
     <h2>顛末</h2>
     <p>
-      事故によりcvs pserverの内容を失い、
-      運用していたサーバも廃止されていたため、
-      ソースは一切消滅してしまいました。
+      事故によりcvs pserverの内容を失い、運用していたサーバも廃止されていたため、ソースは一切消滅してしまいました。
     </p>
 
     <p>
@@ -93,8 +60,7 @@
 
     <p>
       2000年に京都で開催された
-      <a href="http://lc.linux.or.jp/lc2000fall/t-detail.html">LC2000 Fall,
-	Perl/Ruby Conference</a>
+      <a href="http://lc.linux.or.jp/lc2000fall/t-detail.html">LC2000 Fall, Perl/Ruby Conference</a>
       でTrackGuyを発表させていただきました。
     </p>
 
